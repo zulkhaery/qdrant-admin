@@ -1,0 +1,27 @@
+# Composer
+/vendor/
+
+# Environment
+.env
+
+# Logs
+*.log
+
+# Storage
+/storage/*
+!/storage/.gitkeep
+
+# Uploads
+/public/uploads/*
+!/public/uploads/.gitkeep
+
+# IDE
+.vscode/
+.idea/
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Composer lock
+# composer.lock
