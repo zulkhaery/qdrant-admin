@@ -10,7 +10,7 @@
 </div>
 
 <div class="table-card">
-    <table class="table">
+    <table class="table" >
         <thead>
             <tr>
                 <th>Name</th>
@@ -18,6 +18,7 @@
                 <th>Dimension</th>
                 <th>Distance</th>
                 <th>Status</th>
+                <th style="width:10px !important"></th>
             </tr>
         </thead>
         <tbody>
@@ -47,6 +48,10 @@
                     <td><?= $item['dimension'] ?></td>
                     <td><span class="distance-badge"><?= $item['distance'] ?></span></td>
                     <td><span class="badge <?= $statusClass ?>"><?= $item['status'] ?></span></td>
+                    <td> 
+                        <a class="btn-remove remove-vector" href="/collections/remove?name=<?= $item['name'] ?>" onclick="return confirm('Delete Collection ?')">
+                            <i class="bi bi-trash3"></i> 
+                            </a></td>
                 </tr>
             <?php endforeach; ?>
         </tbody>

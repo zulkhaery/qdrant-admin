@@ -134,4 +134,20 @@ class CollectionController
 
         exit;
     }
+
+    public function remove()
+    {
+        $name = $_GET['name'] ?? '';
+
+        if ($name) {
+
+            $qdrant = new QdrantService();
+
+            $qdrant->deleteCollection($name);
+        }
+
+        header('Location: /collections');
+
+        exit;
+    }
 }

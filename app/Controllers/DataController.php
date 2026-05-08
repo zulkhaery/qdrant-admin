@@ -39,6 +39,12 @@ class DataController
             $collection = $_POST['collection'] ?? 'my_docs';
             $title = $_POST['title'] ?? '';
             $content = $_POST['content'] ?? '';
+            $customPayload = $_POST['custom_payload'] ?? '{}';
+            $decodedPayload = json_decode($customPayload,true);
+
+            if (!is_array($decodedPayload)) {
+                $decodedPayload = [];
+            }
 
             if (!empty($_FILES['pdf']['tmp_name'])) {
 
@@ -54,6 +60,7 @@ class DataController
 
             
             $embedding = new EmbeddingService();
+            
             $chunks = chunkText($content);
 
             foreach ($chunks as $index => $chunk) {
@@ -64,12 +71,16 @@ class DataController
                     continue;
                 }
 
-                $payload = [
-                    'title' => $title,
-                    'content' => $chunk,
-                    'chunk_index' => $index + 1,
-                    'created_at' => date('Y-m-d H:i:s')
-                ];
+
+                $payload = array_merge(
+                    [
+                        'title' => $title,
+                        'content' => $chunk,
+                        'chunk_index' => $index + 1,
+                        'created_at' => date('Y-m-d H:i:s')
+                    ],
+                    $decodedPayload
+                );
 
                 $qdrant->insert($collection, rand(1, 999999999), $vector,$payload);
             }
@@ -84,5 +95,22 @@ class DataController
             'collections' => $collections['result']['collections'] ?? []
             
         ]);
+    }
+
+    public function removeVector()
+    {
+        $collection = $_GET['collection'] ?? '';
+        $id = $_GET['id'] ?? '';
+
+        if ($collection && $id) {
+
+            $qdrant = new QdrantService();
+
+            $result = $qdrant->deletePoint($collection,$id);
+        }
+    
+        header('Location: /view-data?collection=' .$collection);
+
+        exit;
     }
 }

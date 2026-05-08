@@ -2,6 +2,14 @@
     margin:0;
     padding:0;
     box-sizing:border-box;
+    scrollbar-color: #777 #0f0f0f;
+    scrollbar-width: auto; 
+}
+
+a {
+    cursor: pointer;
+    text-decoration: none;
+    color:#333;
 }
 
 body{
@@ -340,10 +348,11 @@ pre{
     background:#050b16;
     color:#22c55e;
     padding:16px;
-    border-radius:12px;
+    border-radius:8px;
     max-height:300px;
     overflow:auto;
     font-size:12px;
+    margin-top:10px;
 }
 
 .vector-section{
@@ -356,6 +365,7 @@ pre{
 
 .vector-section summary {
     font-size:13px;
+    cursor: pointer;
 }
 
 .form-group{
@@ -443,3 +453,15 @@ textarea.form-control{
 .action-cell .inline-form{
     justify-content:flex-end;
 }
+
+.hidden {
+    display: none;
+}
+
+.remove-vector {
+    color:#666;
+    float:right;
+    margin-top:0px;
+    font-size: 13px;
+}
+

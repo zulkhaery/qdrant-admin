@@ -186,4 +186,25 @@ class QdrantService
 
         return json_decode($response, true) ?? [];
     }
+
+    public function deletePoint(string $collection, string|int $id): array
+    {
+        return $this->post(
+            "/collections/$collection/points/delete",
+            [
+                'points' => [
+                    is_numeric($id)
+                        ? (int) $id
+                        : $id
+                ]
+            ]
+        );
+    }
+
+    public function deleteCollection(string $name): array
+    {
+        return $this->delete(
+            "/collections/$name"
+        );
+    }
 }

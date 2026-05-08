@@ -32,7 +32,7 @@
 
                   <tr>
                     <td valign="top"><?= $point['id'] ?></td>
-                    <td>
+                    <td class="vector-payload">
                         <pre class="payload-json"><?= htmlspecialchars(json_encode(
                             $point['payload'],
                             JSON_PRETTY_PRINT | JSON_UNESCAPED_UNICODE
@@ -40,13 +40,20 @@
 
                     <div class="vector-section">
                         <details>
-                            <summary>Vector Dimension: <?= count($point['vector'] ?? []) ?></summary>
+                            <summary>Vector Dimension: <?= count($point['vector'] ?? []) ?>
+                            <a class="btn-remove remove-vector" href="/remove-vector?collection=<?= $selectedCollection ?>&id=<?= $point['id'] ?>" onclick="return confirm('Delete vector ?')">
+                                <i class="bi bi-trash3"></i>
+                                Remove Vector
+                            </a>
+                        </summary>
                             <pre class="vector-json"><?= json_encode(
                                 $point['vector'] ?? [],
                                 JSON_PRETTY_PRINT | JSON_UNESCAPED_UNICODE
                             ) ?></pre>
+                            
                         </details>
                     </div>
+                    
                 </td>
             </tr>
                 <?php endforeach; ?>
