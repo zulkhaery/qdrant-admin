@@ -6,7 +6,7 @@
 <nav class="menu">
 
 <a href="/" class="<?= $currentPath == '/' ? 'active' : '' ?>">
-    <i class="bi bi-grid-1x2"></i>
+     <i class="bi bi-grid"></i> 
     Dashboard
 </a>
 
@@ -21,7 +21,7 @@
 </a>
 
 <a href="/ingest" class="<?= $currentPath == '/ingest' ? 'active' : '' ?>">
-    <i class="bi bi-plus-square"></i>
+    <i class="bi bi-file-earmark-arrow-up"></i>
     Document Ingestion
 </a>
 

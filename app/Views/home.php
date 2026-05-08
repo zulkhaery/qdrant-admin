@@ -1,6 +1,11 @@
- <div class="page-header">
-    <h1><?= $title ?></h1>
-    <p>Qdrant Vector Database Dashboard</p>
+<div class="page-header">
+    <div class="page-header-icon">
+        <i class="bi bi-grid"></i> 
+    </div>
+    <div class="page-header-content">
+        <h1><?= $title ?></h1>
+        <p>Qdrant Vector Database Dashboard</p>
+    </div>
 </div>
 
     <div class="dashboard-grid">

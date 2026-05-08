@@ -1,6 +1,11 @@
 <div class="page-header">
-    <h1>View Data</h1>
-    <p>Browse collection points and payloads</p>
+    <div class="page-header-icon">
+        <i class="bi bi-database"></i> 
+    </div>
+    <div class="page-header-content">
+        <h1><?= $title ?></h1>
+        <p>Browse collection points and payloads</p>
+    </div>
 </div>
 
 <div class="table-card">

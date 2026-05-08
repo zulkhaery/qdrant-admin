@@ -1,9 +1,12 @@
-<div class="page-header page-header-flex">
-    <div>
-        <h1>Collections</h1>
+<div class="page-header">
+    <div class="page-header-icon">
+        <i class="bi bi-folder2-open"></i>
+    </div>
+    <div class="page-header-content">
+        <h1><?= $title ?></h1>
         <p>Manage and inspect Qdrant collections</p>
     </div>
-    <a href="/collections/add" class="btn-primary">
+     <a href="/collections/add" class="btn-primary" style="margin-left:auto;">
         <i class="bi bi-plus-lg"></i>
         Add Collection
     </a>

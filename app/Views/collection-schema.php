@@ -1,8 +1,12 @@
 <div class="page-header">
-    <h1>Collection Schema</h1>
-    <p>Inspect and configure Qdrant collection settings</p>
+    <div class="page-header-icon">
+        <i class="bi bi-diagram-3"></i>
+    </div>
+    <div class="page-header-content">
+        <h1><?= $title ?></h1>
+        <p>Inspect and configure Qdrant collection settings</p>
+    </div>
 </div>
-
 <div class="table-card">
     <form method="GET" class="filter-form">
         <select name="collection" class="form-control">

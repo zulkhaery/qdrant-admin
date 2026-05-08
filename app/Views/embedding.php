@@ -1,6 +1,11 @@
 <div class="page-header">
-    <h1>Embedding Test</h1>
-    <p>Test semantic similarity between two texts</p>
+    <div class="page-header-icon">
+        <i class="bi bi-cpu"></i>
+    </div>
+    <div class="page-header-content">
+        <h1><?= $title ?></h1>
+        <p>Test semantic similarity between two texts</p>
+    </div>
 </div>
 
 <div class="table-card">

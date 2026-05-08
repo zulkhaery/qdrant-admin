@@ -1,6 +1,11 @@
 <div class="page-header">
-    <h1>Payload Explorer</h1>
-    <p>Explore and test Qdrant payload filters</p>
+    <div class="page-header-icon">
+        <i class="bi bi-braces"></i>
+    </div>
+    <div class="page-header-content">
+        <h1><?= $title ?></h1>
+        <p>Explore and test Qdrant payload filters</p>
+    </div>
 </div>
 
 <div class="table-card">

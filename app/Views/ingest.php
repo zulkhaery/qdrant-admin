@@ -1,6 +1,11 @@
 <div class="page-header">
-    <h1>Document Ingestion</h1>
-    <p>Insert content into Qdrant collection</p>
+    <div class="page-header-icon">
+       <i class="bi bi-file-earmark-arrow-up"></i>
+    </div>
+    <div class="page-header-content">
+        <h1><?= $title ?></h1>
+        <p>Insert content into Qdrant collection</p>
+    </div>
 </div>
 
 <div class="table-card">

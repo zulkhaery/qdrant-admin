@@ -1,7 +1,13 @@
 <div class="page-header">
-    <h1>Search Vector</h1>
-    <p>Semantic vector similarity search</p>
+    <div class="page-header-icon">
+        <i class="bi bi-search"></i>
+    </div>
+    <div class="page-header-content">
+        <h1><?= $title ?></h1>
+        <p>Semantic vector similarity search</p>
+    </div>
 </div>
+
 
 <div class="table-card">
     <form method="GET" class="filter-form">
