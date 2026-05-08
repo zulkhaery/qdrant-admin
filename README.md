@@ -104,7 +104,6 @@ Install dependencies:
 composer install
 ```
 
----
 
 ## Environment
 
@@ -116,7 +115,6 @@ OLLAMA_HOST=http://localhost:11434
 EMBEDDING_MODEL=nomic-embed-text
 ```
 
----
 
 ## Run
 
@@ -132,7 +130,6 @@ Open browser:
 http://localhost:8000
 ```
 
----
 
 ## Ollama Setup
 
@@ -148,7 +145,6 @@ Run Ollama server:
 ollama serve
 ```
 
----
 
 ## Qdrant Setup
 
@@ -157,15 +153,3 @@ Run Qdrant with Docker:
 ```bash
 docker run -p 6333:6333 qdrant/qdrant
 ```
-
----
-
-## Roadmap
-
-* Multi embedding providers
-* Hybrid search
-* Collection aliases
-* Optimizer configuration
-* Quantization configuration
-* HNSW configuration
-* Authentication
