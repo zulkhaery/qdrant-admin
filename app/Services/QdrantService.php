@@ -41,7 +41,7 @@ class QdrantService
         return $this->get('/collections/' . $name);
     }
 
-    public function scroll( string $collection, int $limit = 20): array {
+    public function scroll( string $collection, int $limit = 1000): array {
 
         return $this->post(
             "/collections/$collection/points/scroll",
@@ -71,6 +71,113 @@ class QdrantService
 
             CURLOPT_POSTFIELDS =>
                 json_encode($payload)
+        ]);
+
+        $response = curl_exec($ch);
+
+        curl_close($ch);
+
+        return json_decode($response, true) ?? [];
+    }
+
+    public function insert(string $collection, int $id, array $vector, array $payload = []): array {
+        return $this->put("/collections/$collection/points",
+            [
+                'points' => [
+                    [
+                        'id' => $id,
+                        'vector' => $vector,
+                        'payload' => $payload
+                    ]
+                ]
+            ]
+        );
+    }
+
+    private function put(string $endpoint, array $payload): array
+    {
+        $ch = curl_init($this->host . $endpoint);
+
+        curl_setopt_array($ch, [
+            CURLOPT_RETURNTRANSFER => true,
+            CURLOPT_CUSTOMREQUEST => 'PUT',
+            CURLOPT_HTTPHEADER => [
+                'Content-Type: application/json'
+            ],
+            CURLOPT_POSTFIELDS => json_encode($payload)
+        ]);
+
+        $response = curl_exec($ch);
+
+        curl_close($ch);
+
+        return json_decode($response, true) ?? [];
+    }
+
+    public function createCollection(string $name, int $size, string $distance): array
+    {
+        return $this->put(
+            "/collections/$name",
+            [
+                'vectors' => [
+                    'size' => $size,
+                    'distance' => $distance
+                ]
+            ]
+        );
+    }
+
+    public function search(string $collection, array $vector, int $limit = 1000): array
+    {
+        return $this->post(
+            "/collections/$collection/points/search",
+            [
+                'vector' => $vector,
+                'limit' => $limit,
+                'with_payload' => true,
+                'with_vector' => false
+            ]
+        );
+    }
+
+    public function payloadFilter(string $collection, array $filter): array
+    {
+        return $this->post(
+            "/collections/$collection/points/scroll",
+            [
+                'filter' => $filter,
+                'limit' => 20,
+                'with_payload' => true,
+                'with_vector' => false
+            ]
+        );
+    }
+
+    public function createPayloadIndex(string $collection, string $field, string $schema): array
+    {
+        return $this->put(
+            "/collections/$collection/index",
+            [
+                'field_name' => $field,
+                'field_schema' => $schema
+            ]
+        );
+    }
+
+    public function deletePayloadIndex(string $collection, string $field): array
+    {
+        return $this->delete(
+            "/collections/$collection/index/$field"
+        );
+    }
+
+    private function delete(string $endpoint): array
+    {
+        $ch = curl_init($this->host . $endpoint);
+
+        curl_setopt_array($ch, [
+            CURLOPT_RETURNTRANSFER => true,
+            CURLOPT_CUSTOMREQUEST => 'DELETE'
         ]);
 
         $response = curl_exec($ch);

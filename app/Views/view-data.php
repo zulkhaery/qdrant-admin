@@ -33,17 +33,17 @@
                   <tr>
                     <td valign="top"><?= $point['id'] ?></td>
                     <td>
-                        <pre class="payload-json"><?= json_encode(
+                        <pre class="payload-json"><?= htmlspecialchars(json_encode(
                             $point['payload'],
-                            JSON_PRETTY_PRINT
-                        ) ?></pre>
+                            JSON_PRETTY_PRINT | JSON_UNESCAPED_UNICODE
+                        )) ?></pre>
 
                     <div class="vector-section">
                         <details>
                             <summary>Vector Dimension: <?= count($point['vector'] ?? []) ?></summary>
                             <pre class="vector-json"><?= json_encode(
                                 $point['vector'] ?? [],
-                                JSON_PRETTY_PRINT
+                                JSON_PRETTY_PRINT | JSON_UNESCAPED_UNICODE
                             ) ?></pre>
                         </details>
                     </div>

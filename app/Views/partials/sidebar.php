@@ -10,7 +10,7 @@
     Dashboard
 </a>
 
-<a href="/collections" class="<?= $currentPath == '/collections' ? 'active' : '' ?>">
+<a href="/collections" class="<?= $currentPath == '/collections' || $currentPath == '/collections/add' ? 'active' : '' ?>">
     <i class="bi bi-folder2-open"></i>
     Collections
 </a>
@@ -28,11 +28,6 @@
 <a href="/search-vector" class="<?= $currentPath == '/search-vector' ? 'active' : '' ?>">
     <i class="bi bi-search"></i>
     Search Vector
-</a>
-
-<a href="/hybrid-search" class="<?= $currentPath == '/hybrid-search' ? 'active' : '' ?>">
-    <i class="bi bi-intersect"></i>
-    Hybrid Search
 </a>
 
 <a href="/payload-explorer" class="<?= $currentPath == '/payload-explorer' ? 'active' : '' ?>">
