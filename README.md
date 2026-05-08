@@ -95,7 +95,7 @@ git clone https://github.com/zulkhaery/qdrant-admin.git
 Go to project:
 
 ```bash
-cd qdrant
+cd qdrant-admin
 ```
 
 Install dependencies:
