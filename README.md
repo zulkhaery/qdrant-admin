@@ -81,7 +81,6 @@ A simple and developer-friendly interface for:
 * Qdrant
 * Ollama
 * Nomic Embed Text
-* Bootstrap Icons
 
 ---
 
@@ -103,12 +102,6 @@ Install dependencies:
 
 ```bash
 composer install
-```
-
-Install PDF parser:
-
-```bash
-composer require smalot/pdfparser
 ```
 
 ---
@@ -167,22 +160,6 @@ docker run -p 6333:6333 qdrant/qdrant
 
 ---
 
-## Project Structure
-
-```text
-app/
-├── Controllers/
-├── Helpers/
-├── Services/
-└── Views/
-
-public/
-├── css/
-└── index.php
-```
-
----
-
 ## Roadmap
 
 * Multi embedding providers
@@ -192,4 +169,3 @@ public/
 * Quantization configuration
 * HNSW configuration
 * Authentication
-* API keys

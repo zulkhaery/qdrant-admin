@@ -37,9 +37,7 @@ class CollectionController
             $name = $_POST['name'] ?? '';
             $size = (int) ($_POST['size'] ?? 768);
             $distance = $_POST['distance'] ?? 'Cosine';
-
             $qdrant = new QdrantService();
-
             $qdrant->createCollection($name, $size, $distance);
 
             header('Location: /collections');
@@ -56,11 +54,8 @@ class CollectionController
     public function schema()
     {
         $qdrant = new QdrantService();
-
         $collections = $qdrant->collections();
-
         $collection = $_GET['collection'] ?? '';
-
         $info = [];
         $payloadFields = [];
         $payloadSchema = [];
@@ -68,17 +63,13 @@ class CollectionController
         if ($collection) {
 
             $info = $qdrant->collectionInfo($collection);
-
             $points = $qdrant->scroll($collection, 1);
-
             $firstPoint = $points['result']['points'][0] ?? null;
-
             $payloadSchema = $info['result']['payload_schema'] ?? [];
 
             if ($firstPoint) {
 
                 foreach ($firstPoint['payload'] as $key => $value) {
-
                     $payloadFields[] = [
                         'field' => $key,
                         'type' => gettype($value)
