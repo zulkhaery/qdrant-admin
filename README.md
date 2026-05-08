@@ -1,4 +1,4 @@
-# Qdrant Admin
+# Qdrant Admin By Zulkhaery
 
 Lightweight Qdrant Admin Panel built with pure PHP.
 
