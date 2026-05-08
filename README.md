@@ -1,6 +1,7 @@
 # Qdrant Admin By Zulkhaery
 
-Lightweight Qdrant Admin Panel built with PHP.
+Lightweight Qdrant Admin Panel built with PHP. 
+Designed for local AI, RAG experimentation, and lightweight deployments.
 
 A simple and developer-friendly interface for:
 
@@ -11,8 +12,6 @@ A simple and developer-friendly interface for:
 * Embedding testing
 * Collection schema inspection
 * Payload index management
-
-Designed for local AI, RAG experimentation, and lightweight deployments.
 
 ---
 
