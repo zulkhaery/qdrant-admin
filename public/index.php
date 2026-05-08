@@ -1,24 +1,29 @@
 <?php
 
+session_start();
+
 require __DIR__ . '/../vendor/autoload.php';
 
-$dotenv = Dotenv\Dotenv::createImmutable(
-    __DIR__ . '/../'
-);
-
+$dotenv = Dotenv\Dotenv::createImmutable(__DIR__ . '/../');
 $dotenv->load();
-
-$routes = require __DIR__ . '/../app/routes.php';
 
 $path = parse_url($_SERVER['REQUEST_URI'], PHP_URL_PATH);
 
-if (!isset($routes[$path])) {
+
+$routes = require __DIR__ . '/../app/routes.php';
+
+$route = $routes[$path] ?? null;
+
+if (!$route) {
     http_response_code(404);
-    exit('404 Not Found');
+    exit('Page not found');
 }
 
-[$class, $method] = $routes[$path];
+if ($route instanceof Closure) {
+    $route();
+    exit;
+}
 
-$controller = new $class();
+[$controller, $method] = $route;
 
-echo $controller->$method();
+(new $controller)->$method();

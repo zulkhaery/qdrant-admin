@@ -33,7 +33,7 @@
         <div class="dashboard-card">
             <div class="card-info">
                 <span class="card-title">Embedding Model</span>
-                <h2>nomic-embed-text</h2>
+                <h2><?=$_ENV['EMBEDDING_MODEL']?></h2>
                 <p>Ollama Provider</p>
             </div>
         </div>

@@ -28,7 +28,7 @@ class DashboardController
                 'qdrant_status' => 'Connected',
                 'collections' => $collectionsCount,
                 'total_vectors' => $totalVectors,
-                'embedding_model' => 'nomic-embed-text',
+                'embedding_model' => $_ENV['EMBEDDING_MODEL'],
                 'dimension' => $dimension,
                 'qdrant_version' => $info['version'] ?? 'Unknown',
                 'host' => $_ENV['QDRANT_HOST'],

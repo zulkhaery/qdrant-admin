@@ -1,7 +1,7 @@
 <aside class="sidebar">
 
     <div class="logo">
-        Qdrant Client
+        Qdrant Admin
     </div>
 <nav class="menu">
 
@@ -44,7 +44,6 @@
     <i class="bi bi-diagram-3"></i>
     Collection Schema
 </a>
-
 </nav>
 
 </aside>

@@ -8,12 +8,12 @@ class EmbeddingService
 
     public function __construct()
     {
-        $this->url = 'http://localhost:11434/api/embeddings';
+        $this->url = $_ENV['OLLAMA_HOST']. '/api/embeddings';
     }
 
     public function dimension(): int
     {
-        $vector = $this->embed('hello world');
+        $vector = $this->embed('txt');
 
         return count($vector);
     }
@@ -21,7 +21,7 @@ class EmbeddingService
     public function embed(string $text): array
     {
         $payload = [
-            'model' => 'nomic-embed-text',
+            'model' => $_ENV['EMBEDDING_MODEL'],
             'prompt' => $text
         ];
 
