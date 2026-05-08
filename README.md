@@ -90,7 +90,7 @@ A simple and developer-friendly interface for:
 Clone repository:
 
 ```bash
-git clone https://github.com/zulkhaery/qdrant.git
+git clone https://github.com/zulkhaery/qdrant-admin.git
 ```
 
 Go to project:
