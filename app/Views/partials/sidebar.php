@@ -17,12 +17,12 @@
 
 <a href="/view-data" class="<?= $currentPath == '/view-data' ? 'active' : '' ?>">
     <i class="bi bi-database"></i>
-    View Data
+    Data Explorer
 </a>
 
-<a href="/input-data" class="<?= $currentPath == '/input-data' ? 'active' : '' ?>">
+<a href="/ingest" class="<?= $currentPath == '/ingest' ? 'active' : '' ?>">
     <i class="bi bi-plus-square"></i>
-    Input Data
+    Document Ingestion
 </a>
 
 <a href="/search-vector" class="<?= $currentPath == '/search-vector' ? 'active' : '' ?>">

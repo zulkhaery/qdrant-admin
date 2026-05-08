@@ -1,5 +1,5 @@
 <div class="page-header">
-    <h1>Input Data</h1>
+    <h1>Document Ingestion</h1>
     <p>Insert content into Qdrant collection</p>
 </div>
 

@@ -41,7 +41,7 @@ body{
 
 .menu a{
     text-decoration:none;
-    font-size:15px;
+    font-size:14px;
     color:#9ca3af;
     transition:0.2s;
 }
@@ -394,6 +394,12 @@ textarea.form-control{
 .btn-danger{
     background:#dc2626 !important;
     white-space:nowrap;
+}
+
+.btn-disabled{
+    background:#999 !important;
+    white-space:nowrap;
+    cursor:not-allowed !important;
 }
 
 .page-header-flex{

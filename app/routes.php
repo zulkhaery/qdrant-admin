@@ -1,17 +1,22 @@
 <?php
 
-use App\Controllers\IndexController;
+use App\Controllers\DashboardController;
+use App\Controllers\CollectionController;
+use App\Controllers\DataController;
+use App\Controllers\SearchController;
+use App\Controllers\EmbeddingController;
+
 
 return [
-    '/' => [IndexController::class, 'dashboard'],
-    '/collections' => [IndexController::class, 'collections'],
-    '/collections/add' => [IndexController::class, 'addCollection'],
-    '/view-data' => [IndexController::class, 'viewData'],
-    '/input-data' => [IndexController::class, 'inputData'],
-    '/search-vector' => [IndexController::class, 'searchVector'],
-    '/payload-explorer' => [IndexController::class, 'payloadExplorer'],
-    '/embedding-test' => [IndexController::class, 'embeddingTest'],
-    '/collection-schema' => [IndexController::class, 'collectionSchema'],
-    '/collection-schema/create-index' => [IndexController::class, 'createPayloadIndex'],
-    '/collection-schema/delete-index' => [IndexController::class, 'deletePayloadIndex'],
+    '/' => [DashboardController::class, 'index'],
+    '/collections' => [CollectionController::class, 'index'],
+    '/collections/add' => [CollectionController::class, 'add'],
+    '/view-data' => [DataController::class, 'index'],
+    '/ingest' => [DataController::class, 'ingest'],
+    '/search-vector' => [SearchController::class, 'searchVector'],
+    '/payload-explorer' => [SearchController::class, 'payloadExplorer'],
+    '/embedding-test' => [EmbeddingController::class, 'embeddingTest'],
+    '/collection-schema' => [CollectionController::class, 'schema'],
+    '/collection-schema/create-index' => [CollectionController::class, 'addIndex'],
+    '/collection-schema/delete-index' => [CollectionController::class, 'deleteIndex'],
 ];
