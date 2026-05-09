@@ -1,16 +1,5 @@
 # Qdrant Admin By Zulkhaery
 
-<p align="center">
-  <img src="public/images/collections.png" width="45%">
-   &nbsp;&nbsp;&nbsp;&nbsp;
-  <img src="public/images/chunk-inspector.png" width="45%">
-</p>
-<p align="center">
-  <img src="public/images/schema.png" width="45%">
-   &nbsp;&nbsp;&nbsp;&nbsp;
-  <img src="public/images/dashboard.png" width="45%">
-</p>
-
 Lightweight Qdrant Admin Panel built with PHP. 
 Designed for local AI, RAG experimentation, and lightweight deployments.
 
@@ -172,3 +161,22 @@ Run Qdrant with Docker:
 ```bash
 docker run -p 6333:6333 qdrant/qdrant
 ```
+
+
+## Screenshots
+
+<p align="center">
+  <img src="public/images/dashboard.png" width="45%">
+  &nbsp;&nbsp;
+  <img src="public/images/chunk-inspector.png" width="45%">
+</p>
+<p align="center">
+  <img src="public/images/collections.png" width="45%">
+  &nbsp;&nbsp;
+ <img src="public/images/schema.png" width="45%">
+</p>
+<p align="center">
+  <img src="public/images/ingest.png" width="45%">
+  &nbsp;&nbsp;
+ <img src="public/images/payload-explorer.png" width="45%">
+</p>
