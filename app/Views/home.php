@@ -92,6 +92,16 @@
         <strong><?= $stats['dimension'] ?></strong>
     </div>
 
+    
+     <div class="info-row">
+        <div class="info-label">
+           <i class="bi bi-bounding-box"></i>
+            <span>Estimated Vector Size</span>
+        </div>
+
+        <strong><?= $stats['estimated_storage'] ?></strong>
+    </div>
+
     <div class="info-row">
         <div class="info-label">
             <i class="bi bi-hdd-network"></i>
