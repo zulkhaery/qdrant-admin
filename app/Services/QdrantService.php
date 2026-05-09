@@ -135,7 +135,7 @@ class QdrantService
                 'vector' => $vector,
                 'limit' => $limit,
                 'with_payload' => true,
-                'with_vector' => false
+                'with_vector' => true
             ]
         );
     }

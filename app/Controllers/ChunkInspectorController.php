@@ -45,7 +45,7 @@ class ChunkInspectorController
                 $searchResponse = $qdrant->search(
                     $selectedCollection,
                     $vector,
-                    20
+                    100
                 );
 
                 $chunks = $searchResponse['result'] ?? [];
@@ -80,6 +80,18 @@ class ChunkInspectorController
             }
         }
 
+        $page = max(1, (int)($_GET['page'] ?? 1));
+
+        $perPage = 10;
+
+        $totalChunks = count($chunks);
+
+        $offset = ($page - 1) * $perPage;
+
+        $chunks = array_slice($chunks, $offset, $perPage);
+
+        $totalPages = ceil($totalChunks / $perPage);
+
         view('chunk-inspector', [
             'title'              => 'Chunk Inspector',
             'collections'        => $collections,
@@ -87,7 +99,11 @@ class ChunkInspectorController
             'chunks'             => $chunks,
             'selectedChunk'      => $selectedChunk,
             'query'              => $query,
-            'distanceMetric' => $distanceMetric,
+            'distanceMetric'    => $distanceMetric,
+            'page' => $page,
+            'perPage' => $perPage,
+            'totalPages' => $totalPages,
+            'totalChunks' => $totalChunks,
         ]);
     }
 }

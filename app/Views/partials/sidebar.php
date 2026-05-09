@@ -30,14 +30,15 @@
     Search Vector
 </a>
 
+
+<a href="/chunk-inspector" class="<?= $currentPath == '/chunk-inspector' ? 'active' : '' ?>">
+    <i class="bi bi-incognito"></i>
+    Chunk Inspector
+</a>
+
 <a href="/payload-explorer" class="<?= $currentPath == '/payload-explorer' ? 'active' : '' ?>">
     <i class="bi bi-braces"></i>
     Payload Explorer
-</a>
-
-<a href="/embedding-test" class="<?= $currentPath == '/embedding-test' ? 'active' : '' ?>">
-    <i class="bi bi-cpu"></i>
-    Embedding Test
 </a>
 
 <a href="/collection-schema" class="<?= $currentPath == '/collection-schema' ? 'active' : '' ?>">
@@ -45,11 +46,11 @@
     Collection Schema
 </a>
 
-
-<a href="/chunk-inspector" class="<?= $currentPath == '/chunk-inspector' ? 'active' : '' ?>">
-    <i class="bi bi-incognito"></i>
-    Chunk Inspector
+<a href="/embedding-test" class="<?= $currentPath == '/embedding-test' ? 'active' : '' ?>">
+    <i class="bi bi-cpu"></i>
+    Embedding Test
 </a>
+
 
 </nav>
 

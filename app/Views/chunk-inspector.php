@@ -4,7 +4,7 @@
     </div>
     <div class="page-header-content">
         <h1><?= $title ?></h1>
-        <p>Inspect chunks, semantic retrieval, and RAG context flow</p>
+        <p>Analyze chunk quality, semantic relevance, and RAG context flow</p>
     </div>
 </div>
 
@@ -26,14 +26,14 @@
         </div>
 
         <div class="toolbar-group search-box">
-            <label>Semantic Query</label>
-            <input type="text" name="query" value="<?= htmlspecialchars($_GET['query'] ?? '') ?>" placeholder="Search semantic chunks...">
+            <label>Search Query</label>
+            <input type="text" name="query" value="<?= htmlspecialchars($_GET['query'] ?? '') ?>" placeholder="Enter search query...">
         </div>
 
         <div class="toolbar-button">
             <button class="btn-primary">
                 <i class="bi bi-search"></i>
-                Search
+                Semantic Search
             </button>
         </div>
     </form>
@@ -45,7 +45,7 @@
     <div class="chunk-panel">
         <div class="panel-header">
             <h3>Retrieved Chunks</h3>
-            <span class="chunk-count"><?= count($chunks) ?> chunks</span>
+            <span class="chunk-count"><?= $totalChunks ?> chunks</span>
         </div>
 
         <?php if (empty($chunks)): ?>
@@ -91,6 +91,42 @@
                 </div>
             </a>
         <?php endforeach; ?>
+
+        <?php if ($totalPages > 1): ?>
+            <div class="pagination">
+            <?php
+            $visiblePages = 4;
+            $start = max(1, $page - 2);
+            $end = $start + ($visiblePages - 1);
+            if ($end > $totalPages) {
+                $end = $totalPages;
+                $start = max(1, $end - ($visiblePages - 1));
+            }
+            ?>
+
+            <?php if ($start > 1): ?>
+                <a href="?collection=<?= urlencode($selectedCollection) ?>&query=<?= urlencode($query) ?>&page=1" class="pagination-item">
+                    1
+                </a>
+                <?php if ($start > 2): ?>
+                    <span class="pagination-dots">...</span>
+                <?php endif; ?>
+            <?php endif; ?>
+            <?php for ($i = $start; $i <= $end; $i++): ?>
+                <a href="?collection=<?= urlencode($selectedCollection) ?>&query=<?= urlencode($query) ?>&page=<?= $i ?>" class="pagination-item <?= $page == $i ? 'active' : '' ?>">
+                    <?= $i ?>
+                </a>
+            <?php endfor; ?>
+            <?php if ($end < $totalPages): ?>
+                <?php if ($end < $totalPages - 1): ?>
+                    <span class="pagination-dots">...</span>
+                <?php endif; ?>
+                <a href="?collection=<?= urlencode($selectedCollection) ?>&query=<?= urlencode($query) ?>&page=<?= $totalPages ?>" class="pagination-item">
+                    <?= $totalPages ?>
+                </a>
+            <?php endif; ?>
+            </div>
+        <?php endif; ?>
     </div>
 
     <!-- RIGHT PANEL -->
@@ -106,9 +142,8 @@
             <div class="inspector-header">
                 <div>
                     <h2>Chunk #<?= $chunkIndex ?></h2>
-                    <p><?= $documentName ?></p>
                 </div>
-                <span class="badge success">Loaded</span>
+                <span class="badge success"><?= $documentName ?></span>
             </div>
 
             <div class="inspector-grid">
