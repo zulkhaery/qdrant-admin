@@ -1,6 +1,6 @@
 # Qdrant Admin By Zulkhaery
 
-Lightweight Qdrant Admin Panel built with PHP. 
+A lightweight unofficial Qdrant admin panel built with PHP.
 Designed for local AI, RAG experimentation, and lightweight deployments.
 
 A simple and developer-friendly interface for:
