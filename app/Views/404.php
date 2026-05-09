@@ -135,8 +135,7 @@ body {
     <h1 class="title">Page Not Found</h1>
 
     <p class="description">
-        The page you are looking for might have been removed,
-        renamed, or is temporarily unavailable.
+       While you're here, <b>enjoy this completely useless placeholder text</b>. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin vel accumsan sapien, sed dapibus tortor. Maecenas velit nulla, dapibus quis consectetur ut, molestie sit amet mauris. Praesent iaculis et urna mollis sagittis. Sed hendrerit nulla ac purus feugiat.
     </p>
 
 
