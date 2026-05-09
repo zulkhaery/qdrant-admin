@@ -83,12 +83,11 @@ A simple and developer-friendly interface for:
 
 ---
 
-## Tech Stack
+## Requirements
 
 * PHP 8+
 * Qdrant
-* Ollama
-* Nomic Embed Text
+* Ollama-compatible embedding model
 
 ---
 
