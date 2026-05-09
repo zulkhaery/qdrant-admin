@@ -135,7 +135,7 @@ body {
     <h1 class="title">Page Not Found</h1>
 
     <p class="description">
-       While you're here, <b>enjoy this completely useless placeholder text</b>. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin vel accumsan sapien, sed dapibus tortor. Maecenas velit nulla, dapibus quis consectetur ut, molestie sit amet mauris. Praesent iaculis et urna mollis sagittis. Sed hendrerit nulla ac purus feugiat.
+       While you're here, <b>enjoy this completely useless placeholder text</b>. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin vel accumsan sapien, sed dapibus tortor. Maecenas velit nulla, dapibus quis consectetur ut, molestie sit amet mauris. Praesent iaculis et urna mollis sagittis. Sed hendrerit nulla ac purus feugiat. Thankyou.
     </p>
 
 
