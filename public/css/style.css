@@ -551,6 +551,9 @@ CHUNK INSPECTOR
     margin-bottom:16px;
     cursor:pointer;
     transition:.2s;
+    display:block;
+    text-decoration:none;
+    color:inherit;
 }
 
 .chunk-card:hover{
@@ -671,11 +674,6 @@ CHUNK INSPECTOR
     background:#f9fafb;
 }
 
-.chunk-card{
-    display:block;
-    text-decoration:none;
-    color:inherit;
-}
 
 .chunk-card:focus,
 .chunk-card:active,
