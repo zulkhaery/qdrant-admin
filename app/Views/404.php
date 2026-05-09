@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-<title>404 - Page Not Found</title>
+<title>404</title>
 
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -135,7 +135,7 @@ body {
     <h1 class="title">Page Not Found</h1>
 
     <p class="description">
-       While you're here, <b>enjoy this completely useless placeholder text</b>. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin vel accumsan sapien, sed dapibus tortor. Maecenas velit nulla, dapibus quis consectetur ut, molestie sit amet mauris. Praesent iaculis et urna mollis sagittis. Sed hendrerit nulla ac purus feugiat. Thankyou.
+       While you're here, <b>enjoy this completely useless placeholder text</b>. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin vel accumsan sapien, sed dapibus tortor. Maecenas velit nulla, dapibus quis consectetur ut, molestie sit amet mauris. Thankyou.
     </p>
 
 
