@@ -60,7 +60,7 @@
                     <th>Field</th>
                     <th>Type</th>
                     <th>Index</th>
-                    <th></th>
+                    <th class="action-cell" width="100">Index Configuration</th>
                 </tr>
             </thead>
             <tbody>
@@ -92,6 +92,7 @@
                                     <input type="hidden" name="field" value="<?= $field['field'] ?>">
 
                                     <select name="schema" class="schema-select">
+                                        <option value="" disabled selected>Select type</option>
                                         <option value="keyword" <?= $indexType == 'keyword' ? 'selected' : '' ?>>keyword</option>
                                         <option value="integer" <?= $indexType == 'integer' ? 'selected' : '' ?>>integer</option>
                                         <option value="float" <?= $indexType == 'float' ? 'selected' : '' ?>>float</option>
