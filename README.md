@@ -99,7 +99,7 @@ Clone repository:
 git clone https://github.com/zulkhaery/qdrant-admin.git
 ```
 
-Go to project:
+Go to project directory:
 
 ```bash
 cd qdrant-admin
@@ -111,6 +111,7 @@ Install dependencies:
 composer install
 ```
 
+---
 
 ## Environment
 
@@ -122,44 +123,31 @@ OLLAMA_HOST=http://localhost:11434
 EMBEDDING_MODEL=nomic-embed-text
 ```
 
+---
 
 ## Run
 
-Using PHP built-in server:
+Start development server:
 
 ```bash
-php -S localhost:8000 -t public
+php adminpanel start
 ```
-
 Open browser:
 
 ```text
 http://localhost:8000
 ```
 
-
-## Ollama Setup
-
-Install model:
+Custom port:
 
 ```bash
-ollama pull nomic-embed-text
-```
-
-Run Ollama server:
-
-```bash
-ollama serve
+php adminpanel start 9000
 ```
 
 
-## Qdrant Setup
 
-Run Qdrant with Docker:
+---
 
-```bash
-docker run -p 6333:6333 qdrant/qdrant
-```
 
 
 ## Screenshots
@@ -169,13 +157,15 @@ docker run -p 6333:6333 qdrant/qdrant
   &nbsp;&nbsp;
   <img src="public/images/chunk-inspector.png" width="45%">
 </p>
+
 <p align="center">
   <img src="public/images/collections.png" width="45%">
   &nbsp;&nbsp;
- <img src="public/images/schema.png" width="45%">
+  <img src="public/images/schema.png" width="45%">
 </p>
+
 <p align="center">
   <img src="public/images/ingest.png" width="45%">
   &nbsp;&nbsp;
- <img src="public/images/payload-explorer.png" width="45%">
+  <img src="public/images/payload-explorer.png" width="45%">
 </p>

@@ -1,0 +1,34 @@
+#!/usr/bin/env php
+<?php
+
+$command = $argv[1] ?? null;
+
+switch ($command) {
+
+    case 'start':
+
+        $port = $argv[2] ?? 8000;
+
+        echo "Qdrant Admin Server\n";
+        echo "Starting at http://localhost:$port\n\n";
+
+        passthru("php -S localhost:$port -t public");
+
+        break;
+
+    case 'about':
+
+        echo "\n";
+        echo "Qdrant Admin By Zulkhaery\n\n";
+        echo "A lightweight unofficial Qdrant admin panel built with PHP.\n";
+        echo "Designed for local AI, RAG experimentation,\n";
+        echo "and lightweight deployments.\n\n";
+
+        break;
+
+    default:
+
+        echo "Available commands:\n";
+        echo "  start [port]\n";
+        echo "  about\n";
+}
