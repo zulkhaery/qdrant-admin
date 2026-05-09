@@ -44,6 +44,13 @@
     <i class="bi bi-diagram-3"></i>
     Collection Schema
 </a>
+
+
+<a href="/chunk-inspector" class="<?= $currentPath == '/chunk-inspector' ? 'active' : '' ?>">
+    <i class="bi bi-incognito"></i>
+    Chunk Inspector
+</a>
+
 </nav>
 
 </aside>

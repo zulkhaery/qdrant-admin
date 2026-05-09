@@ -207,4 +207,18 @@ class QdrantService
             "/collections/$name"
         );
     }
+
+    public function getPoints(string $collection, int $limit = 100): array
+    {
+        $response = $this->post(
+            "/collections/$collection/points/scroll",
+            [
+                'limit' => $limit,
+                'with_payload' => true,
+                'with_vector' => true
+            ]
+        );
+
+        return $response['result']['points'] ?? [];
+    }
 }

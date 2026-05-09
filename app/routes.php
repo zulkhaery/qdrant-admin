@@ -5,7 +5,7 @@ use App\Controllers\CollectionController;
 use App\Controllers\DataController;
 use App\Controllers\SearchController;
 use App\Controllers\EmbeddingController;
-
+use App\Controllers\ChunkInspectorController;
 
 return [
     '/' => [DashboardController::class, 'index'],
@@ -21,4 +21,5 @@ return [
     '/collection-schema' => [CollectionController::class, 'schema'],
     '/collection-schema/create-index' => [CollectionController::class, 'addIndex'],
     '/collection-schema/delete-index' => [CollectionController::class, 'deleteIndex'],
+    '/chunk-inspector' => [ChunkInspectorController::class, 'index'],
 ];

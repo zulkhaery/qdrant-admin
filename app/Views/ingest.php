@@ -51,8 +51,8 @@
   "title"             : "...",
   "content"           : "...",
   "chunk_index"       : "...",
-  "created_at"        : "..."
-   "...custom_fields" : "..."
+  "created_at"        : "...",
+   "...custom_fields" : "...",
    "...custom_fields" : "..."
 }    
 </pre>
