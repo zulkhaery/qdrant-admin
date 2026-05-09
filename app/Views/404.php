@@ -139,7 +139,7 @@ body {
 
 
     <div class="footer">
-        Qdrant Admin Panel By Zulkhaery
+        Qdrant Admin By Zulkhaery
     </div>
 </div>
 
