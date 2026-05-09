@@ -1,5 +1,16 @@
 # Qdrant Admin By Zulkhaery
 
+<p align="center">
+  <img src="public/images/collections.png" width="45%">
+   &nbsp;&nbsp;&nbsp;&nbsp;
+  <img src="public/images/chunk-inspector.png" width="45%">
+</p>
+<p align="center">
+  <img src="public/images/schema.png" width="45%">
+   &nbsp;&nbsp;&nbsp;&nbsp;
+  <img src="public/images/dashboard.png" width="45%">
+</p>
+
 Lightweight Qdrant Admin Panel built with PHP. 
 Designed for local AI, RAG experimentation, and lightweight deployments.
 
@@ -37,6 +48,14 @@ A simple and developer-friendly interface for:
 * Inspect payloads
 * View vector dimension
 * View raw vectors
+
+### Chunk Inspector
+
+* Semantic chunk retrieval
+* Inspect chunk payload and content
+* Analyze vector similarity scores
+* Explore related chunks
+* Debug RAG context retrieval flow
 
 ### Document Ingestion
 
